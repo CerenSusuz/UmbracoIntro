@@ -1,0 +1,68 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+@*
+    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
+    This is the home page for a standard website.
+    It also highlights the current active page/section in the navigation with the CSS class "current".
+*@
+
+@{ var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray(); }
+
+@if (selection?.Length > 0)
+{
+<div class="container">
+    <nav class="navbar navbar-expand navbar-light">
+        <a class="font-weight-bold brand-link" href="@Model.Root().Url()"><i class="fas fa-desktop"></i>  Umbraco-CS</a>
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            @foreach (var item in selection)
+            {
+                <li class="@(item.IsAncestorOrSelf(Model) ? "current" : null)">
+                    <a class="nav-link" href="@item.Url(PublishedUrlProvider)">@item.Name()</a>
+                </li>
+            }
+
+                       <li class="nav-item">
+                <button class="btn btn-login" type="button">Login</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-signup" type="button">Signup</button>
+            </li>
+<li class="nav-item">
+                <div class="search-container">
+                    <button class="btn btn-search" type="button" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+</div>
+
+}
+
+<style>
+    .search-text {
+        display: none;
+        margin-left: 5px;
+    }
+
+    .search-input.active {
+        display: block !important;
+    }
+</style>
+
+<script>
+    function toggleSearch() {
+        var searchInput = document.querySelector('.search-input');
+        searchInput.classList.toggle('active');
+    }
+</script>

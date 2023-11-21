@@ -1,0 +1,266 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px; /* 16 piksel font boyutu */
+    line-height: 1.6; /* Satır aralığı */
+    color: #333; /* Metin rengi */
+    margin-bottom: 1.5rem; /* Alt boşluk */
+}
+.brand-link {
+    color: #FF4500; /* Turuncu renk */
+    transition: color 0.3s ease; /* Geçiş efekti */
+}
+
+.brand-link:hover {
+    color: #004080; /* Lacivert renk üstüne gelince */
+    transition: color 0.3s ease; /* Geçiş efekti */
+}
+
+.form-inline .btn:hover,
+.form-inline .btn:focus {
+    background-color: #FF4500;
+    color: #fff;
+    border-color: #FF4500;
+    border-radius: 8px; /* Köşeleri yuvarlatma */
+    border-width: 2px; /* Çerçeve kalınlığı */
+}
+
+.form-inline .form-control:hover,
+.form-inline .form-control:focus {
+    border-color: #FF4500;
+    border-radius: 8px; /* Köşeleri yuvarlatma */
+    border-width: 2px; /* Çerçeve kalınlığı */
+}
+
+.btn-login, .btn-signup {
+    margin-left: 10px; /* Butonlar arasında boşluk bırakma */
+}
+
+.btn-login {
+    background-color: #004080;
+    color: #fff;
+    border: 2px solid #004080;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-signup {
+    background-color: #FF4500;
+    color: #fff;
+    border: 2px solid #FF4500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-login:hover,
+.btn-signup:hover {
+    background-color: #ccc; /* Gri renk üstüne gelince */
+    color: #fff;
+    border-color: #ccc;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .search-input {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .search-input.active {
+        display: block !important;
+    }
+
+
+h3 {
+    text-align: center; /* Metni ortala */
+    color: #FF4500; /* Turuncu renk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Gölgeli efekt */
+}
+
+.carousel {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px; /* Köşeleri daha yuvarlatmak için */
+}
+
+.carousel-inner {
+    border-radius: 10px; /* Köşeleri daha yuvarlatmak için */
+}
+
+.carousel-item {
+    height: 100%;
+    background: transparent;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Köşeleri daha yuvarlatmak için */
+}
+
+
+.blog-card {
+        border-radius: 15px; /* Köşeleri yuvarlatma */
+        overflow: hidden; /* Kenarları düzeltme */
+    }
+
+    .card-title, .card-text {
+        color: #ffa500; /* Başlık ve metin rengi */
+    }
+
+.card-text {
+    height: 4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.card-footer .btn {
+    background-color: #004080; /* Lacivert arka plan */
+    color: #fff; /* Beyaz metin rengi */
+    border: none; /* Kenarlık olmasın */
+    border-radius: 0; /* Köşe yuvarlatma */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efektleri */
+}
+
+.card-footer .btn:hover {
+    background-color: #FF4500; /* Turuncu renk üstüne gelince */
+    color: #fff; /* Beyaz metin rengi */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efektleri */
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #004080; /* Aynı renk */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; /* Metni ortala */
+}
+
+.footer p {
+    margin: 0;
+    color: #FF4500; /* Turuncu renk */
+    font-weight: bold; /* Kalın metin */
+}
+
+/* Telif Hakkı Metni */
+.copyright {
+    color: #fff; /* Metin rengi */
+}
+.contact-us-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .text-group {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+.contact-section label {
+    color: #004080; /* Lacivert label rengi */
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #FF4500; /* Turuncu kenarlık rengi */
+    border-radius: 5px;
+    font-size: 14px; /* Font boyutu küçültüldü */
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: transparent; /* Placeholder rengi transparent yapıldı */
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    outline: none; /* Odaklandığında outline (kenarlık) kaldırıldı */
+    border-color: #004080; /* Turuncu iken odaklandığında lacivert olacak */
+}
+
+.contact-section button {
+    background-color: #FF4500; /* Turuncu buton arkaplan rengi */
+    color: #004080; /* Lacivert buton metin rengi */
+    border: 2px solid #004080; /* Lacivert buton kenarlık rengi ve kalınlığı */
+    padding: 12px; /* Butonun padding değeri artırıldı */
+    border-radius: 5px;
+}
+
+.contact-section button:hover {
+    background-color: #004080; /* Lacivert buton arkaplan rengi hover durumunda */
+    color: #FF4500; /* Turuncu buton metin rengi hover durumunda */
+}
+
+    .btn-about-us {
+        background-color: #004080; /* Lacivert buton arkaplan rengi */
+        border-color: #004080; /* Lacivert buton kenarlık rengi */
+        color: #fff; /* Beyaz buton metin rengi */
+        border-radius: 15px; /* Köşe yuvarlatma */
+    }
+
+    .btn-about-us:hover {
+        background-color: #FF4500; /* Turuncu buton arkaplan rengi hover durumunda */
+        border-color: #FF4500; /* Turuncu buton kenarlık rengi hover durumunda */
+        color: #fff; /* Beyaz buton metin rengi hover durumunda */
+        border-radius: 15px; /* Köşe yuvarlatma hover durumunda */
+    }
+.thumbnail-blog {
+    padding-bottom: 5px;
+    border-bottom: rgba(53, 68, 177, 1) solid 2px;
+    margin-bottom: 35px;
+    transition: ease .5s;
+}
+
+.thumbnail-blog h5 {
+    font-weight: 700;
+}
+
+.thumbnail-blog .thumbnail-img {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    transition: ease .5s;
+}
+
+a.featured-link:hover .thumbnail-blog {
+    border-bottom: #f79c37 solid 2px;
+}
+
+a.featured-link:hover .thumbnail-blog .thumbnail-img {
+    opacity: .6;
+}
+

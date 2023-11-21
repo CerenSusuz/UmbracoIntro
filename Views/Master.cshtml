@@ -1,0 +1,43 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core.Models.PublishedContent;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    @await Html.PartialAsync("Navigation")
+        <div class="jumbotron text-center">
+        <h1 class="display-4">@Model.Value("title", fallback: Fallback.ToAncestors)</h1>
+        <p class="lead">@Model.Value("subtitle", fallback: Fallback.ToAncestors)</p>
+        <hr class="my-4">
+    <p class="lead">
+        <a class="btn btn-about-us btn-lg" href="#" role="button">Learn more</a>
+    </p>
+    </div>
+
+    @RenderBody()
+    
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p class="copyright">© 2023 Your Company. All rights reserved.</p>
+            <p>@Model.Value("writerName", fallback: Fallback.ToDefaultValue, defaultValue: new HtmlString("Ceren Susuz"))</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/J6mzivaso2SUMxyt8jGlayoutsNi0<uV00AYrió/>" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
