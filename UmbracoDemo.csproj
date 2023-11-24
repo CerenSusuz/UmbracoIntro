@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Our.Umbraco.Community.Contentment" Version="4.5.1" />
+    <PackageReference Include="SeoToolkit.Umbraco" Version="2.6.0" />
     <PackageReference Include="Umbraco.Cms" Version="10.1.0" />
   </ItemGroup>
 
