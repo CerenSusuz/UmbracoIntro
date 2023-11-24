@@ -47,6 +47,18 @@ namespace UmbracoDemo
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseHsts();
+            }
+
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                context.Response.Headers.Add("X-Xss-Protection", "1; mode=block");
+                await next();
+            });
 
             app.UseUmbraco()
                 .WithMiddleware(u =>
